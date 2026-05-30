@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W8SKZMG7');</script>
+<!-- End Google Tag Manager -->
+
+  <script>!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);</script>
+<link rel="preload" href="https://scripts.converteai.net/5cdacbbf-9301-47b2-874b-6d39ecb01ba7/players/6a1b5acde6e507e5f5834632/v4/player.js" as="script">
+<link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/5cdacbbf-9301-47b2-874b-6d39ecb01ba7/6a1b58a4e6e507e5f58341f5/main.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://license.vturb.com">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treinamento Online</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#ffffff;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+      overflow-x:hidden;
+    }
+
+    .container{
+      width:100%;
+      max-width:900px;
+      text-align:center;
+    }
+
+    .headline{
+      font-size:clamp(1.7rem, 4vw, 3.3rem);
+      line-height:1.2;
+      font-weight:800;
+      color:#111;
+      margin-bottom:18px;
+    }
+
+    .headline span {
+      color: #ffffff;
+      background-color: #11c24b;
+      padding: 0px 9px;
+      border-radius: 14px;
+    }
+
+    .subheadline{
+      font-size:clamp(1rem, 2vw, 1.2rem);
+      color:#555;
+      margin-bottom:35px;
+      line-height:1.6;
+      font-weight:400;
+    }
+
+    .video-wrapper{
+      position:relative;
+      width:100%;
+      border-radius:28px;
+      overflow:hidden;
+      background:#000;
+      box-shadow:
+        0 10px 40px rgba(0,0,0,0.12),
+        0 0 0 1px rgba(0,0,0,0.04);
+      transition:0.3s ease;
+    }
+
+    .video-wrapper:hover{
+      transform:translateY(-3px);
+      box-shadow:
+        0 18px 60px rgba(0,0,0,0.18),
+        0 0 0 1px rgba(0,0,0,0.04);
+    }
+
+    .video-container{
+      position:relative;
+      width:100%;
+    }
+
+    .video-container iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:none;
+      border-radius:28px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#ecfff3;
+      color:#11a63f;
+      padding:10px 18px;
+      border-radius:999px;
+      font-size:14px;
+      font-weight:600;
+      margin-bottom:20px;
+      border:1px solid #bff0cf;
+    }
+
+    .dot{
+      width:10px;
+      height:10px;
+      background:#11c24b;
+      border-radius:50%;
+      animation:pulse 1.5s infinite;
+    }
+
+    @keyframes pulse{
+      0%{
+        transform:scale(1);
+        opacity:1;
+      }
+      50%{
+        transform:scale(1.4);
+        opacity:.5;
+      }
+      100%{
+        transform:scale(1);
+        opacity:1;
+      }
+    }
+
+    @media(max-width:768px){
+
+      body{
+        padding:15px;
+      }
+
+      .headline{
+        margin-bottom:15px;
+      }
+
+      .subheadline{
+        margin-bottom:25px;
+      }
+
+      .video-wrapper{
+        border-radius:22px;
+      }
+
+      .video-container iframe{
+        border-radius:22px;
+      }
+    }
+
+  </style>
+
+
+
+<style>
+
+.next-button{
+  display:inline-block;
+  background:#16c60c;
+  color:#fff;
+  font-size:20px;
+  font-weight:700;
+  text-decoration:none;
+  padding:18px 35px;
+  border-radius:16px;
+  margin-bottom:15px;
+  box-shadow:0 0 20px rgba(22,198,12,0.5);
+  animation:pulseButton 1.5s infinite;
+  transition:0.3s;
+}
+
+.next-button:hover{
+  transform:scale(1.03);
+}
+
+@keyframes pulseButton{
+  0%{
+    transform:scale(1);
+    box-shadow:0 0 0 0 rgba(22,198,12,0.7);
+  }
+
+  70%{
+    transform:scale(1.03);
+    box-shadow:0 0 0 18px rgba(22,198,12,0);
+  }
+
+  100%{
+    transform:scale(1);
+    box-shadow:0 0 0 0 rgba(22,198,12,0);
+  }
+}
+
+.free-text{
+  font-size:22px;
+  font-weight:800;
+  color:#111;
+  margin-bottom:15px;
+}
+
+.secure-area img{
+  width:220px;
+  max-width:90%;
+}
+
+</style>
+
+
+
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W8SKZMG7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<article style="display: nones;">
+    <h1>Mercado Livre: Como Funciona, Vantagens e Dicas para Comprar e Vender Online</h1>
+
+    <p>
+        O Mercado Livre é uma das maiores plataformas de comércio eletrônico da América Latina,
+        conectando milhões de compradores e vendedores em diversos países. Fundado em 1999,
+        o marketplace permite que pessoas físicas e empresas anunciem produtos, realizem vendas
+        e efetuem compras de forma prática e segura pela internet.
+    </p>
+
+    <p>
+        Atualmente, a plataforma oferece milhares de categorias de produtos, incluindo eletrônicos,
+        roupas, acessórios, itens para casa, automóveis, ferramentas, brinquedos e muito mais.
+    </p>
+
+    <h2>Como Funciona o Mercado Livre?</h2>
+
+    <p>O funcionamento do Mercado Livre é simples:</p>
+
+    <ol>
+        <li>O vendedor cria um anúncio do produto.</li>
+        <li>O comprador encontra o item através da busca da plataforma.</li>
+        <li>A compra é realizada online.</li>
+        <li>O pagamento é processado pela plataforma.</li>
+        <li>O vendedor envia o produto.</li>
+        <li>O comprador recebe o pedido e confirma a entrega.</li>
+    </ol>
+
+    <p>
+        Todo o processo é acompanhado por sistemas de proteção ao comprador e ao vendedor,
+        aumentando a segurança das transações.
+    </p>
+
+    <h2>Principais Recursos da Plataforma</h2>
+
+    <h3>Marketplace</h3>
+    <p>
+        O principal serviço do Mercado Livre é seu marketplace, onde milhões de produtos
+        são anunciados diariamente.
+    </p>
+
+    <h3>Mercado Pago</h3>
+    <p>
+        O Mercado Pago é a solução financeira da empresa, permitindo pagamentos,
+        transferências, recebimentos e até investimentos.
+    </p>
+
+    <h3>Mercado Envios</h3>
+    <p>
+        O sistema de logística ajuda vendedores a enviarem produtos para todo o país
+        com rastreamento e condições especiais de frete.
+    </p>
+
+    <h3>Mercado Shops</h3>
+    <p>
+        Ferramenta que permite aos vendedores criarem sua própria loja virtual integrada
+        ao ecossistema do Mercado Livre.
+    </p>
+
+    <h2>Vantagens de Comprar no Mercado Livre</h2>
+
+    <ul>
+        <li>Grande variedade de produtos.</li>
+        <li>Possibilidade de comparar preços entre vendedores.</li>
+        <li>Entrega rápida em diversos produtos.</li>
+        <li>Proteção ao comprador.</li>
+        <li>Facilidade de pagamento.</li>
+    </ul>
+
+    <h2>Vantagens de Vender no Mercado Livre</h2>
+
+    <ul>
+        <li>Alcance nacional para milhões de consumidores.</li>
+        <li>Facilidade para anunciar produtos.</li>
+        <li>Ferramentas de gestão e análise de desempenho.</li>
+        <li>Maior credibilidade para o negócio.</li>
+        <li>Integração com logística e meios de pagamento.</li>
+    </ul>
+
+    <h2>Dicas para Comprar com Segurança</h2>
+
+    <ul>
+        <li>Verifique a reputação do vendedor.</li>
+        <li>Leia avaliações de outros compradores.</li>
+        <li>Confira atentamente a descrição do produto.</li>
+        <li>Analise os prazos de entrega.</li>
+        <li>Utilize apenas os meios de pagamento oficiais da plataforma.</li>
+        <li>Evite negociações fora do sistema.</li>
+    </ul>
+
+    <h2>Dicas para Vender Mais</h2>
+
+    <h3>Utilize Fotos de Qualidade</h3>
+    <p>
+        Imagens bem produzidas ajudam a aumentar a confiança dos compradores
+        e melhoram as taxas de conversão.
+    </p>
+
+    <h3>Crie Títulos Otimizados</h3>
+    <p>
+        Utilize palavras-chave relevantes para facilitar que seus produtos
+        apareçam nos resultados de busca.
+    </p>
+
+    <h3>Ofereça Frete Competitivo</h3>
+    <p>
+        Fretes mais atrativos costumam gerar mais vendas e melhorar o posicionamento
+        dos anúncios.
+    </p>
+
+    <h3>Responda Rapidamente</h3>
+    <p>
+        Atender dúvidas dos clientes com agilidade melhora a reputação do vendedor
+        e aumenta as chances de conversão.
+    </p>
+
+    <h2>Mercado Livre e o Crescimento do E-commerce</h2>
+
+    <p>
+        Nos últimos anos, o comércio eletrônico brasileiro apresentou forte crescimento,
+        e o Mercado Livre se consolidou como uma das principais opções para quem deseja
+        comprar e vender online. A empresa investe continuamente em logística, tecnologia
+        e soluções financeiras para melhorar a experiência dos usuários.
+    </p>
+
+    <p>
+        Com uma ampla variedade de produtos, ferramentas para vendedores e recursos de
+        segurança para compradores, a plataforma continua sendo uma das principais
+        referências do comércio eletrônico na América Latina.
+    </p>
+
+    <h2>Perguntas Frequentes</h2>
+
+    <h3>É seguro comprar no Mercado Livre?</h3>
+    <p>
+        Sim. A plataforma possui sistemas de proteção ao comprador, monitoramento de
+        transações e avaliações de vendedores.
+    </p>
+
+    <h3>Preciso ter empresa para vender?</h3>
+    <p>
+        Não. Pessoas físicas também podem anunciar e vender produtos na plataforma.
+    </p>
+
+    <h3>Como recebo pelas vendas?</h3>
+    <p>
+        Os pagamentos geralmente são processados pelo Mercado Pago, que disponibiliza
+        os valores ao vendedor após a conclusão da venda.
+    </p>
+
+    <h3>O Mercado Livre cobra taxas?</h3>
+    <p>
+        Sim. Dependendo da categoria e do tipo de anúncio escolhido, podem ser cobradas
+        taxas sobre as vendas realizadas.
+    </p>
+
+    <h3>Posso vender produtos usados?</h3>
+    <p>
+        Sim. A plataforma permite a venda de produtos novos e usados, desde que respeitem
+        as políticas estabelecidas.
+    </p>
+
+    <h2>Conclusão</h2>
+
+    <p>
+        O Mercado Livre se tornou uma das maiores plataformas de comércio eletrônico da
+        América Latina, oferecendo oportunidades para consumidores e empreendedores.
+        Seja para comprar produtos com praticidade ou para expandir um negócio online,
+        o marketplace disponibiliza recursos que facilitam todo o processo de venda e
+        compra pela internet.
+    </p>
+</article>
+
+  <div class="container">
+
+    <div class="badge">
+      <div class="dot"></div>
+      Mais Potência
+    </div>
+
+    <h1 class="headline">
+      Descubra Como Pessoas Estão com <span>MAIS POTÊNCIA</span>
+      na Cama através desse Método Diferente!
+    </h1>
+
+    <p class="subheadline">
+      Assista ao vídeo até o final e veja como começar ainda hoje de casa! Tratamento 100% Natural sem Contra Indicações.
+    </p>
+
+    <div class="video-wrapper">
+      <div class="video-container">
+
+
+        <vturb-smartplayer id="vid-6a1b64a135319bc2b5e7c63b" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer> <script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/5cdacbbf-9301-47b2-874b-6d39ecb01ba7/players/6a1b64a135319bc2b5e7c63b/v4/player.js", s.async=!0,document.head.appendChild(s); </script>
+
+      </div>
+    </div>
+    <!-- LOADING -->
+<div id="loadingArea" style="margin-top:20px;">
+
+  <img src="imagens/carregando.gif" width="100px" alt=""> <br>
+  <img src="imagens/site-seguro.png" width="222px" alt="">
+</div>
+
+<!-- BOTÃO OCULTO -->
+<div id="nextClassArea" style="display:none; margin-top:30px;">
+
+  <a href="https://wa.me/5571993107035?text=Ol%C3%A1,%20acabei%20de%20assistir%20o%20v%C3%ADdeo%20e%20quero%20saber%20mais%20sobre%20o%20tratamento!"
+     class="next-button">
+    Assistir Próxima Aula Agora
+  </a>
+
+  <div class="free-text">
+    Garanta Já seu Acessso
+  </div>
+
+  <div class="secure-area">
+    <img src="imagens/site-seguro.png"
+         alt="Site Seguro">
+  </div>
+
+</div>
+
+<script>
+
+  // 7 minutos = 420000 ms
+  setTimeout(function(){
+
+    // some loading
+    document.getElementById("loadingArea").style.display = "none";
+
+    // mostra botão
+    document.getElementById("nextClassArea").style.display = "block";
+
+  }, 100000);
+
+</script>
+
+
+
+  </div>
+
+  
+
+</body>
+</html>
